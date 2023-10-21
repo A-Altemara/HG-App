@@ -1,3 +1,5 @@
+
+
 function PlusMinus(props) {
     function handle(e) {
         if (e.target.id.includes('minus')) {
@@ -30,6 +32,7 @@ function update(section, value) {
             .end(function (err, res) {
                 err ? reject(null) : resolve(res.body);
             });
+
     });
 }
 
@@ -75,6 +78,7 @@ function App() {
         </div>
     </>);
 }
+
 
 ReactDOM.render(
     <App />,

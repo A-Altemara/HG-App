@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var redis = require("redis")
 // var client = redis.createClient()
-
+const tesHeaderPlusButton = require("./puppeteer.js");
 
 // serve static files from public directory
 app.use(express.static('public'));
@@ -81,6 +81,8 @@ app.get('/update/:key/:value', function (req, res) {
 app.listen(3000, () => {
     console.log('Running on 3000');
 });
+
+tesHeaderPlusButton();
 
 process.on("exit", function () {
     client.quit();
